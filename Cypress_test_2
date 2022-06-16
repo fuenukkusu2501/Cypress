@@ -1,0 +1,11 @@
+describe('Наличие контактной информации', () => {
+
+    it('Заходим на Byndyusoft', () => {
+
+        cy.visit('https://byndyusoft.com/')
+        cy.contains('Заказать презентацию').click()
+        cy.get('div.popup-callback__footer > div > a:nth-child(1)').should('have.text', '8 800 775-15-21')
+        cy.get('div.popup-callback__footer > div > a:nth-child(3)').should('have.text', 'sales@byndyusoft.com')
+    })
+    
+    })
