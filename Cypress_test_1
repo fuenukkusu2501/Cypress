@@ -1,0 +1,11 @@
+describe('Наличие контактной информации', () => {
+
+    it('Гуглим нашу любимую компанию)', () => {
+
+        cy.visit('https://www.google.ru/')
+        cy.get("input[title='Поиск']").type('Byndyusoft').type('{enter}')
+        cy.get('.yuRUbf > a:first').invoke('removeAttr', 'target').click()//Убиваем атрибут target="_blank"
+    
+    })
+
+})
